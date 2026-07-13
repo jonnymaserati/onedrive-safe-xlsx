@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onedrive-safe-xlsx"
+version = "0.1.0"
+description = "Edit .xlsx with openpyxl without breaking OneDrive/SharePoint sync or version history"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+authors = [{ name = "Jonathan Corcutt" }]
+keywords = ["openpyxl", "xlsx", "ooxml", "onedrive", "sharepoint", "version-history", "excel"]
+dependencies = ["openpyxl"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Office/Business",
+  "Topic :: Software Development :: Libraries",
+  "Intended Audience :: Developers",
+]
+
+[project.urls]
+Homepage = "https://github.com/jonnymaserati/onedrive-safe-xlsx"
+Issues = "https://github.com/jonnymaserati/onedrive-safe-xlsx/issues"
+
+[tool.setuptools]
+py-modules = ["onedrive_safe_xlsx"]

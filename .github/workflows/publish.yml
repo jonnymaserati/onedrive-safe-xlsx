@@ -1,0 +1,26 @@
+name: publish
+
+# Publishes to PyPI on a GitHub Release, via Trusted Publishing (OIDC — no API token stored).
+# ONE-TIME SETUP on PyPI before the first release actually publishes:
+#   PyPI -> project (or "pending publisher") -> add a Trusted Publisher:
+#     owner: jonnymaserati, repo: onedrive-safe-xlsx, workflow: publish.yml, environment: pypi
+# Until that's configured, this workflow builds fine but the upload step will be rejected.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write   # required for Trusted Publishing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build
+      - run: python -m build
+      - uses: pypa/gh-action-pypi-publish@release/v1
