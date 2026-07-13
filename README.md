@@ -1,6 +1,8 @@
 # onedrive_safe_xlsx
 
 [![tests](https://github.com/jonnymaserati/onedrive-safe-xlsx/actions/workflows/test.yml/badge.svg)](https://github.com/jonnymaserati/onedrive-safe-xlsx/actions/workflows/test.yml)
+[![PyPI](https://img.shields.io/pypi/v/onedrive-safe-xlsx)](https://pypi.org/project/onedrive-safe-xlsx/)
+[![Downloads](https://static.pepy.tech/badge/onedrive-safe-xlsx)](https://pepy.tech/project/onedrive-safe-xlsx)
 
 Edit `.xlsx` files with **openpyxl** without breaking **OneDrive / SharePoint** sync and version history.
 
